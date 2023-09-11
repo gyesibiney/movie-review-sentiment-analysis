@@ -7,7 +7,7 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification, pipe
 app = FastAPI()
 
 # Load the pre-trained model and tokenizer
-model_name = "gyesibiney/covid-tweet-sentimental-Analysis-roberta"
+model_name = "gyesibiney/Sentiment-review-analysis-roberta-3"
 model = AutoModelForSequenceClassification.from_pretrained(model_name)
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 
