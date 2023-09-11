@@ -21,7 +21,7 @@ RUN transformers-cli login
 
 # Clone the model repository
 RUN transformers-cli repo clone git lfs install
-git clone https://huggingface.co/spaces/gyesibiney/sentiment-movie-review-FASTAPI-2 --path /code/model
+git clone gyesibiney/Sentiment-review-analysis-roberta-3 --path /code/model
 
 # Add your application code here to use the downloaded model
 
