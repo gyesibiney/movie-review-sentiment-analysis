@@ -10,17 +10,18 @@ COPY ./requirements.txt /code/requirements.txt
 # Install requirements
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
-# Add your application code here (e.g., FastAPI code)
-COPY main.py .
 # Install transformers library
 RUN pip install transformers
 
 # Specify the model name from Hugging Face
-ARG MODEL_NAME="gyesibiney/covid-tweet-sentimental-Analysis-roberta"
+ARG MODEL_NAME="gyesibiney/Sentiment-review-analysis-roberta-3"
 
 # Download the model from Hugging Face (you can replace 'main' with a specific tag or version)
-RUN transformers-cli login --api-key your_api_key_here
-RUN transformers-cli repo clone $MODEL_NAME --path /code/model
+RUN transformers-cli login
+
+# Clone the model repository
+RUN transformers-cli repo clone git lfs install
+git clone https://huggingface.co/spaces/gyesibiney/sentiment-movie-review-FASTAPI-2 --path /code/model
 
 # Add your application code here to use the downloaded model
 
