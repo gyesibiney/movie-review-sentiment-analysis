@@ -14,8 +14,8 @@ sentiment = pipeline("sentiment-analysis", model=model, tokenizer=tokenizer)
 
 # Create a dictionary to map sentiment labels to binary values
 sentiment_label_mapping = {
-    "LABEL_1": 1,  # Positive
-    "LABEL_0": 0,  # Negative
+    "LABEL_1": "positive",
+    "LABEL_0": "negative",
 }
 
 # Define a request body model
