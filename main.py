@@ -24,7 +24,7 @@ class SentimentRequest(BaseModel):
 
 # Define a response model
 class SentimentResponse(BaseModel):
-    sentiment: int  # 1 for positive, 0 for negative
+    sentiment: str  # 1 for positive, 0 for negative
     score: float
 
 # Create an endpoint for sentiment analysis with query parameter
