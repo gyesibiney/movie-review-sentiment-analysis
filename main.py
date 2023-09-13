@@ -12,7 +12,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)
 # Create a sentiment analysis pipeline
 sentiment = pipeline("sentiment-analysis", model=model, tokenizer=tokenizer)
 
-# Create a dictionary to map sentiment labels to binary values
+# Create a dictionary to map sentiment labels to positive and negative strings
 sentiment_label_mapping = {
     "LABEL_1": "positive",
     "LABEL_0": "negative",
